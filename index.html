@@ -1,0 +1,1215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Santhosh E | Java Full Stack Developer</title>
+
+    <meta name="description"
+          content="Santhosh E - Java Full Stack Developer Fresher skilled in Java, Spring Boot, React.js, Hibernate, REST APIs, SQL and MySQL.">
+
+    <style>
+        /* =========================
+           GLOBAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --text: #334155;
+            --light-text: #64748b;
+            --background: #f8fafc;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --white: #ffffff;
+        }
+
+        body.dark {
+            --secondary: #f8fafc;
+            --text: #cbd5e1;
+            --light-text: #94a3b8;
+            --background: #020617;
+            --card: #0f172a;
+            --border: #1e293b;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            transition: 0.3s;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .section-title p {
+            color: var(--light-text);
+        }
+
+        /* =========================
+           NAVBAR
+        ========================== */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background: var(--card);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .theme-btn,
+        .menu-btn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--secondary);
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.3fr 0.7fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text .small-title {
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 {
+            font-size: 56px;
+            line-height: 1.1;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary);
+        }
+
+        .hero-text h3 {
+            font-size: 25px;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            max-width: 650px;
+            color: var(--light-text);
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .profile-circle {
+            width: 190px;
+            height: 190px;
+            margin: auto;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-card h3 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .hero-card p {
+            color: var(--light-text);
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info-item {
+            background: var(--card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .info-item span {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .skill-icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card h3 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .skill-card p {
+            color: var(--light-text);
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .project-number {
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .project-card h3 {
+            color: var(--secondary);
+            font-size: 23px;
+            margin: 10px 0;
+        }
+
+        .project-card p {
+            color: var(--light-text);
+            margin-bottom: 20px;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .tech {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           EDUCATION / TRAINING
+        ========================== */
+
+        .timeline {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            background: var(--card);
+            border-left: 4px solid var(--primary);
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 0 10px 10px 0;
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-item h3 {
+            color: var(--secondary);
+            margin-bottom: 5px;
+        }
+
+        .timeline-item .date {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            color: var(--light-text);
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-box {
+            max-width: 800px;
+            margin: auto;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-box h3 {
+            font-size: 28px;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .contact-box p {
+            color: var(--light-text);
+            margin-bottom: 25px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            padding: 25px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--light-text);
+        }
+
+        footer span {
+            color: var(--primary);
+        }
+
+        /* =========================
+           ANIMATION
+        ========================== */
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(25px);
+            transition: 0.7s ease;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .nav-links {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--card);
+                flex-direction: column;
+                padding: 25px;
+                display: none;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .info-box {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header>
+        <div class="container">
+            <nav>
+
+                <a href="#home" class="logo">
+                    Santhosh E<span>.</span>
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+                <div>
+                    <button class="theme-btn" id="themeBtn">🌙</button>
+                    <button class="menu-btn" id="menuBtn">☰</button>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-text fade-in">
+
+                    <div class="small-title">
+                        👋 Hello, I'm
+                    </div>
+
+                    <h1>
+                        Santhosh <span>E</span>
+                    </h1>
+
+                    <h3>
+                        Java Full Stack Developer Fresher
+                    </h3>
+
+                    <p>
+                        A passionate Computer Science Engineering graduate
+                        focused on building reliable and user-friendly web
+                        applications using Java, Spring Boot, React.js,
+                        REST APIs and SQL.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+                            View My Projects
+                        </a>
+
+                        <a href="#contact" class="btn btn-outline">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card fade-in">
+
+                    <div class="profile-circle">
+                        SE
+                    </div>
+
+                    <h3>Java Full Stack Developer</h3>
+
+                    <p>Fresher • Immediate Joiner</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+                <p>Get to know me</p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text fade-in">
+
+                    <h3>Building applications with Java & modern web technologies.</h3>
+
+                    <p>
+                        I am a 2024 B.E. Computer Science Engineering graduate
+                        with a strong foundation in Java Full Stack Development.
+                    </p>
+
+                    <p>
+                        I have hands-on project experience with Java,
+                        Spring Boot, Hibernate, JPA, REST APIs, MySQL,
+                        HTML, CSS, JavaScript and React.js.
+                    </p>
+
+                    <p>
+                        I am currently looking for an entry-level opportunity
+                        where I can contribute to real-world projects,
+                        improve my technical skills and grow as a software
+                        developer.
+                    </p>
+
+                </div>
+
+
+                <div class="info-box fade-in">
+
+                    <div class="info-item">
+                        <strong>🎓 Education</strong>
+                        <span>B.E. Computer Science Engineering</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>📅 Graduation</strong>
+                        <span>2024</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>💻 Role</strong>
+                        <span>Java Full Stack Developer</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>📍 Location</strong>
+                        <span>Chennai, Tamil Nadu</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>🚀 Availability</strong>
+                        <span>Immediate / 15 Days</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>⭐ CGPA</strong>
+                        <span>8.68 / 10</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Technical <span>Skills</span></h2>
+                <p>Technologies I work with</p>
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">☕</div>
+                    <h3>Java</h3>
+                    <p>Core Java, OOP, Collections, JDBC, Servlets, JSP</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🌱</div>
+                    <h3>Spring Boot</h3>
+                    <p>Spring MVC, Spring Data JPA, REST APIs</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">⚛️</div>
+                    <h3>React.js</h3>
+                    <p>Components, JavaScript, UI development</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Database</h3>
+                    <p>MySQL, SQL, Oracle, Hibernate, JPA</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🌐</div>
+                    <h3>Web</h3>
+                    <p>HTML5, CSS3, JavaScript, Responsive Design</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🔗</div>
+                    <h3>REST API</h3>
+                    <p>CRUD, JSON, API integration, Exception Handling</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">🔧</div>
+                    <h3>Tools</h3>
+                    <p>Git, GitHub, Eclipse, VS Code</p>
+                </div>
+
+                <div class="skill-card fade-in">
+                    <div class="skill-icon">☁️</div>
+                    <h3>Cloud</h3>
+                    <p>AWS fundamentals and cloud computing concepts</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>My <span>Projects</span></h2>
+                <p>Some of my practical work</p>
+            </div>
+
+
+            <div class="projects-grid">
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card fade-in">
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>AGRICULTECH</h3>
+
+                    <p>
+                        A web-based agricultural marketplace that helps
+                        farmers sell products, find laborers based on
+                        location and access agricultural tools.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech">Java</span>
+                        <span class="tech">Servlets</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                        <span class="tech">MVC</span>
+                    </div>
+
+                    <a href="https://github.com/SanthoshElumalaiM"
+                       target="_blank"
+                       class="btn btn-outline">
+                        GitHub →
+                    </a>
+
+                </div>
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card fade-in">
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>RESTful Banking Service Platform</h3>
+
+                    <p>
+                        A banking management application supporting account
+                        creation, deposits, withdrawals, balance checking,
+                        fund transfers and transaction history.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span class="tech">Java</span>
+                        <span class="tech">Spring Boot</span>
+                        <span class="tech">Spring Data JPA</span>
+                        <span class="tech">Hibernate</span>
+                        <span class="tech">MySQL</span>
+                        <span class="tech">React.js</span>
+                        <span class="tech">REST API</span>
+                    </div>
+
+                    <a href="https://github.com/SanthoshElumalaiM"
+                       target="_blank"
+                       class="btn btn-outline">
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EDUCATION
+    ========================== -->
+
+    <section id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Education & <span>Training</span></h2>
+                <p>My learning journey</p>
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item fade-in">
+
+                    <div class="date">
+                        2020 – 2024
+                    </div>
+
+                    <h3>
+                        B.E. Computer Science Engineering
+                    </h3>
+
+                    <p>
+                        Adhiparasakthi College of Engineering,
+                        Kalavai – Anna University
+                    </p>
+
+                    <p>
+                        CGPA: <strong>8.68 / 10</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item fade-in">
+
+                    <div class="date">
+                        Jul 2024 – Jun 2025
+                    </div>
+
+                    <h3>
+                        Java Full Stack Development
+                    </h3>
+
+                    <p>
+                        QSpiders – Chennai
+                    </p>
+
+                    <p>
+                        Training in Core Java, Advanced Java, JDBC,
+                        Servlets, JSP, Spring, Spring Boot, Hibernate,
+                        SQL, HTML, CSS, JavaScript and React.js.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item fade-in">
+
+                    <div class="date">
+                        Feb 2024 – Mar 2024
+                    </div>
+
+                    <h3>
+                        Full Stack Developer – Online Internship
+                    </h3>
+
+                    <p>
+                        NoviTech R&D
+                    </p>
+
+                    <p>
+                        Practical exposure to full-stack web development
+                        through an e-commerce project.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item fade-in">
+
+                    <div class="date">
+                        2026
+                    </div>
+
+                    <h3>
+                        AWS Cloud Fundamentals
+                    </h3>
+
+                    <p>
+                        Currently learning AWS fundamentals including
+                        cloud concepts, EC2, EBS, S3, IAM and
+                        practical cloud exercises.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Let's <span>Connect</span></h2>
+                <p>Open to software development opportunities</p>
+            </div>
+
+
+            <div class="contact-box fade-in">
+
+                <h3>Looking for a Java Developer?</h3>
+
+                <p>
+                    I am actively looking for entry-level opportunities
+                    as a Java Developer, Java Full Stack Developer,
+                    Software Developer or Associate Software Engineer.
+                </p>
+
+
+                <div class="contact-links">
+
+                    <a href="mailto:your-email@gmail.com"
+                       class="btn btn-primary">
+                        📧 Email Me
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/santhoshelumalaim/"
+                       target="_blank"
+                       class="btn btn-outline">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/SanthoshElumalaiM"
+                       target="_blank"
+                       class="btn btn-outline">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © <span id="year"></span>
+                Santhosh E. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           MOBILE MENU
+        ========================== */
+
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+            if (navLinks.classList.contains("active")) {
+                menuBtn.textContent = "✕";
+            } else {
+                menuBtn.textContent = "☰";
+            }
+
+        });
+
+
+        /* Close mobile menu after clicking */
+
+        document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navLinks.classList.remove("active");
+                menuBtn.textContent = "☰";
+
+            });
+
+        });
+
+
+        /* =========================
+           DARK / LIGHT MODE
+        ========================== */
+
+        const themeBtn = document.getElementById("themeBtn");
+
+        themeBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark");
+
+            if (document.body.classList.contains("dark")) {
+
+                themeBtn.textContent = "☀️";
+
+                localStorage.setItem("theme", "dark");
+
+            } else {
+
+                themeBtn.textContent = "🌙";
+
+                localStorage.setItem("theme", "light");
+
+            }
+
+        });
+
+
+        /* Remember theme */
+
+        if (localStorage.getItem("theme") === "dark") {
+
+            document.body.classList.add("dark");
+            themeBtn.textContent = "☀️";
+
+        }
+
+
+        /* =========================
+           SCROLL ANIMATION
+        ========================== */
+
+        const fadeElements = document.querySelectorAll(".fade-in");
+
+        function showOnScroll() {
+
+            fadeElements.forEach(function(element) {
+
+                const elementTop =
+                    element.getBoundingClientRect().top;
+
+                const windowHeight =
+                    window.innerHeight;
+
+                if (elementTop < windowHeight - 80) {
+
+                    element.classList.add("show");
+
+                }
+
+            });
+
+        }
+
+        window.addEventListener("scroll", showOnScroll);
+
+        showOnScroll();
+
+
+        /* =========================
+           CURRENT YEAR
+        ========================== */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+</html>
